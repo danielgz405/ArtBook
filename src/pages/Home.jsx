@@ -15,6 +15,7 @@ export default function Home() {
         <FeaturesComponent />
       </main>
       <FooterComponent />
+      <h1></h1>
     </div>
   );
 }
