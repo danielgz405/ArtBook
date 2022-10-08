@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 export default function FeaturesComponent() {
   return (
     <>
@@ -17,9 +19,9 @@ export default function FeaturesComponent() {
                 ¿Por que ArtBook?
               </h2>
               <p className="mt-3 text-xl text-white">ArtBook es una red social que busca que los artistas tengan mas recocimiento y visibilidad por su arte</p>
-              <a href="/" className="mt-8 block w-full rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto">
+              <Link to="/login" className="mt-8 block w-full rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto">
                 Registrate
-              </a>
+              </Link>
             </div>
           </div>
         </div>
