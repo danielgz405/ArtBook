@@ -1,6 +1,7 @@
 import { Dialog, Tab, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { Link } from 'react-router-dom';
 
 export default function NavigationMovile({ mobileMenuOpen, Fragment, setMobileMenuOpen, navigation, classNames, currencies }) {
   return (
@@ -90,14 +91,14 @@ export default function NavigationMovile({ mobileMenuOpen, Fragment, setMobileMe
 
                 <div className="space-y-6 border-t border-gray-200 py-6 px-4">
                   <div className="flow-root">
-                    <a href="/" className="-m-2 block p-2 font-medium text-gray-900">
+                    <Link to="/login" className="-m-2 block p-2 font-medium text-gray-900">
                       Create an account
-                    </a>
+                    </Link>
                   </div>
                   <div className="flow-root">
-                    <a href="/" className="-m-2 block p-2 font-medium text-gray-900">
+                    <Link href="/login" className="-m-2 block p-2 font-medium text-gray-900">
                       Sign in
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

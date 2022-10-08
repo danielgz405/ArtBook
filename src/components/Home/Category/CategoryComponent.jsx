@@ -1,25 +1,25 @@
 const categories = [
   {
-    name: 'New Arrivals',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-category-01.jpg',
+    name: 'Realismo',
+    href: '/login',
+    imageSrc: 'https://www.lifeder.com/wp-content/uploads/2019/05/Realismo-artistico-wiki.jpg',
   },
   {
-    name: 'Productivity',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-category-02.jpg',
+    name: 'Fotorrealismo',
+    href: '/login',
+    imageSrc: 'https://cdn.oldskull.net/wp-content/uploads/2015/01/mike-dargas-painting-4.jpg',
   },
   {
-    name: 'Workspace',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-category-04.jpg',
+    name: 'Expresionismo',
+    href: '/login',
+    imageSrc: 'https://www.inoutviajes.com/fotos/20/14602_feininger-barco.jpg',
   },
   {
-    name: 'Accessories',
-    href: '#',
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-category-05.jpg',
+    name: 'Impresionismo',
+    href: '/login',
+    imageSrc: 'https://www.arquitecturapura.com/wp-content/uploads/2019/07/ESCULTURAS-IMPRESIONISTAS.jpg',
   },
-  { name: 'Sale', href: '#', imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-01-category-03.jpg' },
+  { name: 'Óleo', href: '/login', imageSrc: 'https://3.bp.blogspot.com/-Gr_jVLHBH6U/VIN-EdwU4CI/AAAAAAAANH8/t_tr_5ikxs0/s1600/bodegones-con-jarras-pintados-oleo.jpg' },
 ];
 
 export default function CategoryComponent() {
@@ -29,9 +29,9 @@ export default function CategoryComponent() {
       <section aria-labelledby="category-heading" className="pt-24 sm:pt-32 xl:mx-auto xl:max-w-7xl xl:px-8" id="Artists">
         <div className="px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 xl:px-0">
           <h2 id="category-heading" className="text-2xl font-bold tracking-tight text-gray-900">
-            Shop by Category
+            Category of Art
           </h2>
-          <a href="/" className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+          <a href="/home" className="hidden text-sm font-semibold text-stone-600 hover:text-stone-500 sm:block">
             Browse all categories
             <span aria-hidden="true"> &rarr;</span>
           </a>

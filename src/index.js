@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
@@ -7,17 +6,28 @@ import ScrollToTop from './common/ScrollToTop';
 import Home from './pages/Home';
 import Error404 from './pages/Error404';
 import './assets/css/global.css';
+import LoginPage from './pages/Login';
+import ArtBook from './pages/ArtBook';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import GraphicsPage from './pages/Graphics';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Error404 />} />
-        </Routes>
-      </ScrollToTop>
-    </BrowserRouter>
+    <>
+      <ToastContainer />
+      <BrowserRouter>
+        <ScrollToTop>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<LoginPage toast={toast} />} />
+            <Route path="/Home" element={<ArtBook toast={toast} />} />
+            <Route path="/Analitics" element={<GraphicsPage toast={toast} />} />
+            <Route path="*" element={<Error404 />} />
+          </Routes>
+        </ScrollToTop>
+      </BrowserRouter>
+    </>
   );
 }
 

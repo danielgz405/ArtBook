@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
 import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon } from '@heroicons/react/24/outline';
-import { Link } from 'react-scroll';
+import { Link as Scroll } from 'react-scroll';
+import { backgroundHeroImage } from './NavigationList';
 
 export default function NavigationDesktop({ children, navigation, classNames, Fragment, setMobileMenuOpen }) {
   return (
@@ -8,7 +10,7 @@ export default function NavigationDesktop({ children, navigation, classNames, Fr
       <div className="relative bg-gray-900">
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-          <img src="https://tailwindui.com/img/ecommerce-images/home-page-01-hero-full-width.jpg" alt="" className="h-full w-full object-cover object-center" />
+          <img src={backgroundHeroImage[Math.floor(Math.random() * (backgroundHeroImage.length - 0) + 0)]} alt="" className="h-full w-full object-cover object-center backdrop-filter" />
         </div>
         <div aria-hidden="true" className="absolute inset-0 bg-gray-900 opacity-50" />
 
@@ -19,18 +21,18 @@ export default function NavigationDesktop({ children, navigation, classNames, Fr
             <div className="bg-gray-900">
               <div className="mx-auto flex h-10 max-w-7xl items-center justify-center px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center space-x-6">
-                  <a href="/" className="text-sm font-medium text-white hover:text-gray-100">
+                  <Link to="/login" className="text-sm font-medium text-white hover:text-gray-100">
                     Sign in
-                  </a>
-                  <a href="/" className="text-sm font-medium text-white hover:text-gray-100">
+                  </Link>
+                  <Link to="/login" className="text-sm font-medium text-white hover:text-gray-100">
                     Create an account
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
 
             {/* Secondary navigation */}
-            <div className="bg-white bg-opacity-10 backdrop-blur-md backdrop-filter">
+            <div className="bg-stone-700 bg-opacity-30 backdrop-blur-md backdrop-filter">
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div>
                   <div className="flex h-16 items-center justify-between">
@@ -78,12 +80,12 @@ export default function NavigationDesktop({ children, navigation, classNames, Fr
                                                 <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-md bg-gray-100 group-hover:opacity-75">
                                                   <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
                                                 </div>
-                                                <a href={item.href} className="mt-4 block font-medium text-gray-900">
+                                                <Link to={item.href} className="mt-4 block font-medium text-gray-900">
                                                   <span className="absolute inset-0 z-10" aria-hidden="true" />
                                                   {item.name}
-                                                </a>
+                                                </Link>
                                                 <p aria-hidden="true" className="mt-1">
-                                                  Shop now
+                                                  Category
                                                 </p>
                                               </div>
                                             ))}
@@ -98,9 +100,9 @@ export default function NavigationDesktop({ children, navigation, classNames, Fr
                           ))}
 
                           {navigation.pages.map((page) => (
-                            <Link key={page.name} to={page.href} className="flex items-center text-sm font-medium text-white" spy={true} smooth={true} offset={0} duration={500}>
+                            <Scroll key={page.name} to={page.href} className="flex items-center text-sm font-medium text-white" spy={true} smooth={true} offset={0} duration={500}>
                               {page.name}
-                            </Link>
+                            </Scroll>
                           ))}
                         </div>
                       </Popover.Group>
