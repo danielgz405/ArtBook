@@ -25,7 +25,7 @@ export default function HeaderComponent({ user, userNavigation, navigation, toas
               <div className="relative flex justify-between lg:gap-8 xl:grid xl:grid-cols-12">
                 <div className="flex md:absolute md:inset-y-0 md:left-0 lg:static xl:col-span-2">
                   <div className="flex flex-shrink-0 items-center">
-                    <Link to="/">
+                    <Link to="/Home">
                       <img className="h-8 w-auto" src="LogoDarkOutCircle.png" alt="" />
                     </Link>
                   </div>
